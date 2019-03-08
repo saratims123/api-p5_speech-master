@@ -31,7 +31,10 @@ pen = {
         ellipse(this.x, this.y, this.size, this.size);
     },
     bounce: function(){
-       this.x = this.x < 0 ? 0 : this.x > width ? width : this.x; 
+        this.x = this.x < 0 ? 0 : this.x;
+            this.x = this.x > width ? width : this.x;
+            this.y = this.y < 0 ? 0 : this.y;
+            this.y = this.y > height ? height : this.y;
     }
 }
 
